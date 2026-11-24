@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "512592910170",
+    "project_id": "mobile-app-23077",
+    "storage_bucket": "mobile-app-23077.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:512592910170:android:3d4651de94bb245e828563",
+        "android_client_info": {
+          "package_name": "com.example.pertemuan_9"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDraFaN8peiVdJirjxZfRvMOygMvApDOWU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:512592910170:android:85b2228ecfb3f84a828563",
+        "android_client_info": {
+          "package_name": "com.pertemuan9.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDraFaN8peiVdJirjxZfRvMOygMvApDOWU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
