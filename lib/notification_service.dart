@@ -37,7 +37,23 @@ class NotificationService {
           _openDetail(jsonDecode(response.payload!) as Map<String, dynamic>);
         }
       },
-    );
+    ); await _localNotif
+        .resolvePlatformSpecificImplementation<
+          AndroidFlutterLocalNotificationsPlugin
+        >()
+        ?.createNotificationChannel(_channel);
+    try {
+      // ignore: deprecated_member_use
+      final token = await _messaging.getToken();
+      debugPrint('[FCM] TOKEN: $token');
+    } catch (e) {
+      debugPrint('[FCM] Gagal mengambil token: $e');
+    }
+    // ignore: deprecated_member_use
+    _messaging.onTokenRefresh.listen((newToken) {
+      debugPrint('[FCM] TOKEN BARU: $newToken');
+    });
+
   }
 
   
