@@ -53,6 +53,8 @@ class NotificationService {
     _messaging.onTokenRefresh.listen((newToken) {
       debugPrint('[FCM] TOKEN BARU: $newToken');
     });
+    await _messaging.subscribeToTopic('kelas');
+
 
   }
 
