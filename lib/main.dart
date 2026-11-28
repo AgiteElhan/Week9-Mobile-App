@@ -15,3 +15,26 @@ void main() async{
 
   runApp(const MyApp());
 }
+
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyApp();
+}
+
+class _MyApp extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Task Week9 agit',
+      navigatorKey: navigatorKey,
+      initialRoute: '/',
+      routes: {
+        '/' : (context)=> LoginPage(),
+        '/home' :(context) => HomePage(),
+      },
+    );
+  }
+}
