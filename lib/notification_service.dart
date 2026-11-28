@@ -29,6 +29,15 @@ class NotificationService {
       sound: true
     );
     debugPrint('[FCM] Status izin: ${settings.authorizationStatus}');
+    const androidInit = AndroidInitializationSettings('@mipmap/ic_launcher');
+    await _localNotif.initialize(
+      settings: const InitializationSettings(android: androidInit),
+      onDidReceiveNotificationResponse: (NotificationResponse response) {
+        if (response.payload != null) {
+          _openDetail(jsonDecode(response.payload!) as Map<String, dynamic>);
+        }
+      },
+    );
   }
 
   
